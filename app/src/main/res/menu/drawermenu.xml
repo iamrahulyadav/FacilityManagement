@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/my_id">
+
+        <item
+            android:title="Shoaib Anwar"
+            android:icon="@drawable/person_icon"
+            android:id="@+id/nav_item_username"/>
+        <item
+            android:title="Live Support"
+            android:icon="@android:drawable/ic_menu_send"
+            android:id="@+id/nav_item_chat"/>
+        <item
+            android:title="Chat Room"
+            android:icon="@android:drawable/ic_menu_send"
+            android:id="@+id/nav_item_chat_rrom"/>
+
+
+    </group>
+
+
+</menu>

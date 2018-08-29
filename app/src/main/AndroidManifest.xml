@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shoaibnwar.facilitymanagement">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".Utilities.AppContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.HomeMoreOptions"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Activities.LoginActivityHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Activities.SubmisionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <service android:name=".Services.FireBaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activities.LiveSupportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity android:name=".Activities.BaseActvitvityForDrawer" />
+
+        <activity android:name=".Activities.ChatActictivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ChatSystem.SimgleChat.Chat"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ChatSystem.SimgleChat.Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+        <activity android:name=".ChatSystem.SimgleChat.ChatMainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ChatSystem.SimgleChat.Register"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".ChatSystem.SimgleChat.Users"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+        <activity
+            android:name="com.shoaibnwar.facilitymanagement.ChatSystem.ComplexChat.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.shoaibnwar.facilitymanagement.ChatSystem.ComplexChat.ui.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentBackground">
+        </activity>
+        <activity
+            android:name="com.shoaibnwar.facilitymanagement.ChatSystem.ComplexChat.ui.RegisterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+        <activity
+            android:name="com.shoaibnwar.facilitymanagement.ChatSystem.ComplexChat.ui.ChatActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.shoaibnwar.facilitymanagement.ChatSystem.ComplexChat.MainActivity"/>
+        <activity android:name="com.shoaibnwar.facilitymanagement.ChatSystem.ComplexChat.ui.AddGroupActivity"
+            android:theme="@style/MyThemeNoActionbar"/>
+        <service android:name="com.shoaibnwar.facilitymanagement.ChatSystem.ComplexChat.service.FriendChatService"
+            android:exported="false"
+            android:persistent= "true" />
+
+    </application>
+
+</manifest>
